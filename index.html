@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="prism.css"/>
+        <link rel="stylesheet" href="styles.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>Bootstrap</title>
+    </head>
+    <body>
+        <input type="checkbox" id="check"/>
+        <label for="check">
+            <i class="fas fa-bars" id="btn"></i>
+        </label>
+        <nav id="navbar">
+            <header>
+                Bootstrap Documentation
+            </header>
+            <ul>
+                <li><a href="#introduction" class="nav-link">Introduction</a></li>
+                <li><a href="#installation" class="nav-link">Installation</a></li>
+                <li><a href="#bootstrap's_grid_system" class="nav-link">Bootstrap's Grid System</a></li>
+                <li><a href="#bootstraps_components" class="nav-link">Bootstraps Components</a></li>
+                <li><a href="#customization" class="nav-link">Customization</a></li>
+                <li><a href="#bootstrap_utilities" class="nav-link">Bootstrap Utilities</a></li>
+                <li><a href="#javascript_plugins" class="nav-link">JavaScript Plugins</a></li>
+            </ul>
+        </nav>
+        <main id="main-doc">
+            <section id="introduction" class="main-section">
+                <header class="description">
+                    Introduction
+                </header>
+                <article>
+                    <p>
+                        Bootstrap is one of the most popular open-source front-end frameworks used 
+                        for developing responsive and mobile-first websites. Originally created by Twitter
+                         developers Mark Otto and Jacob Thornton, Bootstrap has evolved into a comprehensive 
+                         toolkit that includes CSS, JavaScript components, and a powerful grid system. This section 
+                         provides a detailed introduction to Bootstrap, covering its key features, structure, and
+                        practical usage.
+                    </p>
+                    <h2>Key Features of Bootstrap</h2>
+                    <ul>
+                        <li>
+                            <b>Responsive Grid System  -</b> Bootstrap’s grid system is one of its most powerful features. It allows you to create complex layouts with a series of rows and columns that automatically adjust based on the screen size.
+                        </li>
+                        <li>
+                            <b>Pre-styled Components -</b> Bootstrap comes with a variety of reusable components like buttons, forms, navigation bars, modals, and more, all of which are pre-styled and easily customizable.
+                        </li>
+                        <li>
+                            <b>Customizable -</b> While Bootstrap provides a lot out of the box, it’s also highly customizable. You can modify its default styles using CSS or Sass, and even create your own themes.
+                        </li>
+                        <li>
+                            <b>Cross-browser Compatibility -</b> Bootstrap ensures that your website looks consistent across various browsers and devices, reducing the need for extensive cross-browser testing.
+                        </li>
+                        <li>
+                            <b>JavaScript Plugins -</b> Bootstrap includes a collection of JavaScript plugins that add interactivity to your site, such as carousels, modals, tooltips, and more.
+                        </li>
+                        <li>
+                            <b>Extensive Documentation -</b> Bootstrap is well-documented, with detailed examples and explanations of its components and features, making it accessible even to beginners.
+                        </li>
+                    </ul>
+                </article>
+            </section>
+            <section id="what_you_should_already_know" class="main-section">
+                <header>
+                    What you should already know
+                </header>
+                <article>
+                    <p>
+                        This guide assumes you have the following basic background:
+                    </p>
+                    <ul>
+                        <li>
+                            A general understanding of the Internet and the World Wide Web (WWW).
+                        </li>
+                        <li>
+                            Good working knowledge of HyperText Markup Language (HTML) and Cascading Style Sheet (CSS).
+                        </li>
+                        <li>
+                            Some programming experience with JavaScript (JS).
+                        </li>
+                    </ul>
+                </article>
+            </section>
+            <section id="installation" class="main-section">
+                <header>
+                    Installation
+                </header>
+                <article>
+                    <p>
+                        Bootstrap can be integrated into your project in several ways. The most common methods are:
+                    </p>
+                    <ul>
+                        <li>
+                            <b>Using the CDN -</b> You can include Bootstrap in your project by linking to the Bootstrap CSS and JavaScript files hosted on a Content Delivery Network (CDN).
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+        &lt;title&gt;Bootstrap Example&lt;/title&gt;
+        &lt;!-- Bootstrap CSS --&gt;
+        &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Hello, Bootstrap!&lt;/h1&gt;
+        &lt;!-- Bootstrap JS --&gt;
+        &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                        </li>
+                        <li>
+                            <b>Downloading Bootstrap -</b> You can download the Bootstrap files from the official website and include them locally in your project.
+                        </li>
+                        <li>
+                            <b>Using a Package Manager -</b>Bootstrap can be installed via package managers like npm or Yarn, which is particularly useful for modern web development workflows.
+                            <pre><code>npm install bootstrap</code></pre>
+                        </li>
+                    </ul>
+                </article>
+            </section>
+            <section id="bootstrap's_grid_system" class="main-section">
+                <header>
+                    Bootstrap's Grid System
+                </header>
+                <article>
+                    <p>
+                        Bootstrap’s grid system is based on a 12-column layout, which allows you to create complex responsive layouts. The grid system is flexible and adapts to the screen size, ensuring that your content is displayed properly on different devices.
+                    </p>
+                    <ul>
+                        <li>
+                            <b>Basic Structure -</b> The grid system is composed of containers, rows, and columns.
+<pre ><code class="language-html">&ltdiv class=&quotcontainer&quot&gt
+    &ltdiv class=&quotrow&quot&gt
+        &ltdiv class=&quotcol&quot&gt
+            Column 1
+        &lt/div&gt
+        &ltdiv class=&quotcol&quot&gt
+            Column 2
+        &lt/div&gt
+        &ltdiv class=&quotcol&quot&gt
+            Column 3
+        &lt/div&gt
+    &lt/div&gt
+&lt/div&gt</code></pre>
+                        </li>
+                        <li>
+                            <b>Responsive Breakpoints -</b> Bootstrap includes predefined classes for different screen sizes. You can use these classes to control the layout at various breakpoints:
+                            <ul>
+                                <li>
+                                    .col- for extra small devices (less than 576px)
+                                </li>
+                                <li>
+                                    .col-sm- for small devices (576px and up)
+                                </li>
+                                <li>
+                                    .col-md- for medium devices (768px and up)
+                                </li>
+                                <li>
+                                    .col-lg- for large devices (992px and up)
+                                </li>
+                                <li>
+                                    .col-xl- for extra-large devices (1200px and up)
+                                </li>
+                                <li>
+                                    .col-xxl- for extra-extra-large devices (1400px and up)
+                                </li>
+                            </ul>
+<pre ><code class="language-html">&ltdiv class=&quotcontainer&quot&gt
+    &ltdiv class=&quotrow&quot&gt
+        &ltdiv class=&quotcol-12 col-md-6 col-lg-4&quot&gt
+            Column 1
+        &lt/div&gt
+        &ltdiv class=&quotcol-12 col-md-6 col-lg-4&quot&gt
+            Column 2
+        &lt/div&gt
+        &ltdiv class=&quotcol-12 col-md-6 col-lg-4&quot&gt
+            Column 3
+        &lt/div&gt
+    &lt/div&gt
+&lt/div&gt</code></pre>
+                        </li>
+                    </ul>
+                </article>
+            </section>
+            <section id="bootstraps_components" class="main-section">
+                <header>
+                    Bootstraps Components
+                </header>
+                <article>
+                    <p>Bootstrap provides a wide range of components that can be easily integrated into your project. These components are designed to be reusable and customizable.</p>
+                    <ul>
+                        <li>
+                            <b>Buttons -</b> Bootstrap includes a variety of pre-styled buttons with different styles and states.
+                            <pre><code class="language-html">&ltbutton type=&quotbutton&quot class=&quotbtn btn-primary&quot&gtPrimary Button&lt/button&gt
+&ltbutton type=&quotbutton&quot class=&quotbtn btn-secondary&quot&gtSecondary Button&lt/button&gt
+&ltbutton type=&quotbutton&quot class=&quotbtn btn-success&quot&gtSuccess Button&lt/button&gt</code></pre>
+                        </li>
+                        <li>
+                            <p><b>Forms -</b> Bootstrap simplifies form creation with consistent styling and behavior across different elements.</p>
+<pre><code class="language-html">&ltform&gt
+    &ltdiv class=&quotmb-3&quot&gt
+        &ltlabel for=&quotexampleInputEmail1&quot class=&quotform-label&quot&gtEmail address&lt/label&gt
+        &ltinput type=&quotemail&quot class=&quotform-control&quot id=&quotexampleInputEmail1&quot aria-describedby=&quotemailHelp&quot&gt
+        &ltdiv id=&quotemailHelp&quot class=&quotform-text&quot&gtWe&#39;ll never share your email with anyone else.&lt/div&gt
+    &lt/div&gt
+    &ltdiv class=&quotmb-3&quot&gt
+        &ltlabel for=&quotexampleInputPassword1&quot class=&quotform-label&quot&gtPassword&lt/label&gt
+        &ltinput type=&quotpassword&quot class=&quotform-control&quot id=&quotexampleInputPassword1&quot&gt
+    &lt/div&gt
+    &ltbutton type=&quotsubmit&quot class=&quotbtn btn-primary&quot&gtSubmit&lt/button&gt
+&lt/form&gt</code></pre>
+                        </li>
+                        <li>
+                            <p>
+                                <b>Navbars -</b>Navbars are responsive and extendable, providing a consistent UI for navigation.
+                            </p>
+                            
+<pre><code class="language-html">&ltnav class=&quotnavbar navbar-expand-lg navbar-light bg-light&quot&gt  
+    &ltdiv class=&quotcontainer-fluid&quot&gt
+        &lta class=&quotnavbar-brand&quot href=&quot#&quot&gtNavbar&lt/a&gt
+        &ltbutton class=&quotnavbar-toggler&quot type=&quotbutton&quot data-bs-toggle=&quotcollapse&quot data-bs-target=&quot#navbarNav&quot aria-controls=&quotnavbarNav&quot aria-expanded=&quotfalse&quot aria-label=&quotToggle navigation&quot&gt
+            &ltspan class=&quotnavbar-toggler-icon&quot&gt&lt/span&gt
+        &lt/button&gt
+        &ltdiv class=&quotcollapse navbar-collapse&quot id=&quotnavbarNav&quot&gt
+            &ltul class=&quotnavbar-nav&quot&gt
+                &ltli class=&quotnav-item&quot&gt
+                    &lta class=&quotnav-link active&quot aria-current=&quotpage&quot href=&quot#&quot&gtHome&lt/a&gt
+                &lt/li&gt
+                &ltli class=&quotnav-item&quot&gt
+                    &lta class=&quotnav-link&quot href=&quot#&quot&gtFeatures&lt/a&gt
+                &lt/li&gt
+                &ltli class=&quotnav-item&quot&gt
+                    &lta class=&quotnav-link&quot href=&quot#&quot&gtPricing&lt/a&gt
+                &lt/li&gt
+            &lt/ul&gt
+        &lt/div&gt
+    &lt/div&gt
+&lt/nav&gt</code></pre>
+                        </li>
+                        <li>
+                            <p><b>Modals -</b> Modals are a key component in Bootstrap for creating dialog boxes, popovers, and alerts.</p>
+                            
+<pre><code class="language-html">&lt!-- Button trigger modal --&gt
+&ltbutton type=&quotbutton&quot class=&quotbtn btn-primary&quot data-bs-toggle=&quotmodal&quot data-bs-target=&quot#exampleModal&quot&gt
+    Launch demo modal
+&lt/button&gt
+
+&lt!-- Modal --&gt
+&ltdiv class=&quotmodal fade&quot id=&quotexampleModal&quot tabindex=&quot-1&quot aria-labelledby=&quotexampleModalLabel&quot aria-hidden=&quottrue&quot&gt
+    &ltdiv class=&quotmodal-dialog&quot&gt
+        &ltdiv class=&quotmodal-content&quot&gt
+            &ltdiv class=&quotmodal-header&quot&gt
+                &lth5 class=&quotmodal-title&quot id=&quotexampleModalLabel&quot&gtModal title&lt/h5&gt
+                &ltbutton type=&quotbutton&quot class=&quotbtn-close&quot data-bs-dismiss=&quotmodal&quot aria-label=&quotClose&quot&gt&lt/button&gt
+            &lt/div&gt
+            &ltdiv class=&quotmodal-body&quot&gt
+                This is a Bootstrap modal.
+            &lt/div&gt
+            &ltdiv class=&quotmodal-footer&quot&gt
+                &ltbutton type=&quotbutton&quot class=&quotbtn btn-secondary&quot data-bs-dismiss=&quotmodal&quot&gtClose&lt/button&gt
+                &ltbutton type=&quotbutton&quot class=&quotbtn btn-primary&quot&gtSave changes&lt/button&gt
+            &lt/div&gt
+        &lt/div&gt
+    &lt/div&gt
+&lt/div&gt</code></pre>
+                        </li>
+                    </ul>
+                </article>
+            </section>
+            <section id="customization" class="main-section">
+                <header>
+                    Customization
+                </header>
+                <article>
+                    <p>
+                        Bootstrap is designed to be flexible. You can customize Bootstrap's default styles using CSS or preprocessors like Sass. Customization can involve simple CSS overrides or more extensive changes using Bootstrap’s source Sass files.
+                    </p>
+                    <ul>
+                        <li>
+                            <p>
+                                <b>Overriding Styles -</b> You can override Bootstrap's default styles by including your custom CSS after the Bootstrap CSS file.
+                            </p>
+                            <pre><code class="language-css">.btn-custom {
+    background-color: #4CAF50;
+    color: white;
+}</code></pre>
+                            <pre><code class="language-html">&ltbutton type="button" class="btn btn-custom"&gtCustom Button&lt/button&gt</code></pre>
+                        </li>
+                        <li>
+                            <p>
+                                <b>Using Sass -</b> For more advanced customization, you can use Bootstrap's Sass source files to modify variables and create a custom build.
+                            </p>
+<pre><code class="language-css">                // Custom Bootstrap variables                                               
+$primary: #ff5722;
+$font-family-base: 'Helvetica Neue', Arial, sans-serif;
+
+@import "node_modules/bootstrap/scss/bootstrap";</code></pre>
+
+                            <p>You can then compile this Sass file into a custom CSS file that reflects your specific design requirements.</p>
+                        </li>
+                    </ul>
+                </article>
+            </section>
+            <section id="bootstrap_utilities" class="main-section">
+                <header>
+                    Bootstrap utilities
+                </header>
+                <article>
+                    <p>
+                        Bootstrap includes a range of utility classes that can help you with spacing, alignment, text styles, and more. These utilities are designed to simplify common tasks without needing to write custom CSS.
+                    </p>
+                    <ul>
+                        <li>
+                            <b>Spacing Utilities -</b> Adjust margins and padding with easy-to-use classes.
+                            <pre><code class="language-html">&ltdiv class="p-3 mb-2 bg-primary text-white"&gtThis div has padding and margin&lt/div&gt</code></pre>
+                            <ul>
+                                <li>
+                                    p-3: Adds padding on all sides.
+                                </li>
+                                <li>
+                                    mb-2: Adds a bottom margin.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>Text Alignment -</b> Align text using classes like .text-center, .text-left, and .text-right.
+                            <pre><code class="language-html">&ltp class="text-center"&gtThis text is centered&lt/p&gt</code></pre>
+                        </li>
+                        <li>
+                            <b>Flexbox Utilities -</b> Bootstrap leverages Flexbox to provide utility classes for layout management.
+                            <pre><code class="language-html">&ltdiv class="d-flex justify-content-center"&gt
+    &ltdiv class="p-2"&gtFlex item 1&lt/div&gt
+    &ltdiv class="p-2"&gtFlex item 2&lt/div&gt
+&lt/div&gt</code></pre>
+                            <ul>
+                                <li>
+                                    d-flex: Makes the container a flexbox.
+                                </li>
+                                <li>
+                                    justify-content-center: Centers the flex items horizontally.
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </article>
+            </section>
+            <section id="javascript_plugins" class="main-section">
+                <header>
+                    JavaScript Plugins
+                </header>
+                <article>
+                    <p>
+                        Bootstrap comes with a collection of JavaScript plugins that add interactivity and dynamic behavior to your site. These plugins can be initialized either through data attributes or JavaScript.
+                    </p>
+                    <ul>
+                        <li>
+                            <b>Carousel -</b> Create a slideshow of images or content with the Carousel plugin.
+                            <pre><code class="language-html">&ltdiv id=&quotcarouselExampleIndicators&quot class=&quotcarousel slide&quot data-bs-ride=&quotcarousel&quot&gt
+    &ltdiv class=&quotcarousel-indicators&quot&gt
+        &ltbutton type=&quotbutton&quot data-bs-target=&quot#carouselExampleIndicators&quot data-bs-slide-to=&quot0&quot class=&quotactive&quot aria-current=&quottrue&quot aria-label=&quotSlide 1&quot&gt&lt/button&gt
+        &ltbutton type=&quotbutton&quot data-bs-target=&quot#carouselExampleIndicators&quot data-bs-slide-to=&quot1&quot aria-label=&quotSlide 2&quot&gt&lt/button&gt
+        &ltbutton type=&quotbutton&quot data-bs-target=&quot#carouselExampleIndicators&quot data-bs-slide-to=&quot2&quot aria-label=&quotSlide 3&quot&gt&lt/button&gt
+    &lt/div&gt
+    &ltdiv class=&quotcarousel-inner&quot&gt
+        &ltdiv class=&quotcarousel-item active&quot&gt
+            &ltimg src=&quotimage1.jpg&quot class=&quotd-block w-100&quot alt=&quot...&quot&gt
+        &lt/div&gt
+        &ltdiv class=&quotcarousel-item&quot&gt
+            &ltimg src=&quotimage2.jpg&quot class=&quotd-block w-100&quot alt=&quot...&quot&gt
+        &lt/div&gt
+        &ltdiv class=&quotcarousel-item&quot&gt
+            &ltimg src=&quotimage3.jpg&quot class=&quotd-block w-100&quot alt=&quot...&quot&gt
+        &lt/div&gt
+    &lt/div&gt
+    &ltbutton class=&quotcarousel-control-prev&quot type=&quotbutton&quot data-bs-target=&quot#carouselExampleIndicators&quot data-bs-slide=&quotprev&quot&gt
+        &ltspan class=&quotcarousel-control-prev-icon&quot aria-hidden=&quottrue&quot&gt&lt/span&gt
+        &ltspan class=&quotvisually-hidden&quot&gtPrevious&lt/span&gt
+    &lt/button&gt
+    &ltbutton class=&quotcarousel-control-next&quot type=&quotbutton&quot data-bs-target=&quot#carouselExampleIndicators&quot data-bs-slide=&quotnext&quot&gt
+        &ltspan class=&quotcarousel-control-next-icon&quot aria-hidden=&quottrue&quot&gt&lt/span&gt
+        &ltspan class=&quotvisually-hidden&quot&gtNext&lt/span&gt
+    &lt/button&gt
+&lt/div&gt</code></pre>
+                        </li>
+                        <li>
+                            <b>Tooltips -</b> Add informative tooltips to your elements.
+                            <pre><code class="language-html">&ltbutton type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"&gt
+    Hover over me
+&lt/button&gt
+
+&ltscript&gt
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+&lt/script&gt</code></pre>
+                        </li>
+                    </ul>
+                </article>
+            </section>
+        </main>
+        <script src="prism.js"></script>
+    </body>
+</html>

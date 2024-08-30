@@ -1,0 +1,125 @@
+
+body{
+    padding: 0px;
+    margin : 0;
+    font-family: 'Open Sans', Arial, sans-serif;;
+    color: #4d4e53;
+    line-height: 1.5;
+}
+main{
+    box-sizing: border-box;
+    margin: 0 20px;
+}
+header{
+    color: black;
+}
+.main-section{
+    margin: auto;
+
+}
+
+
+.main-section header{
+    font-size: 2rem;
+    margin: 10px 0;
+}
+
+article{
+    margin-left: 15px;
+    margin-top: 20px;
+}
+
+li{
+    margin: 15px 0;
+}
+pre{
+    margin: 5px 0;
+    padding: 5px 0;
+    width: 95%;
+    border-radius: 5px;
+}
+code{
+    background-color: #f5f2f0;
+    display: block;
+    text-align: left;
+    padding: 10px;
+    margin: 0;
+} 
+
+
+#navbar{
+    display: block;
+    height: 100%;
+    width: 350px;
+    background-color: #F7F7F7;
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    border-left: solid 3px grey;
+    top: 0px;
+    right: -355px;
+    transition: all 0.5s ease;
+    
+  }
+  #navbar ul{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    font-size: 1.5rem;
+
+  }
+#navbar ul li{
+    padding: 30px 0;
+    border-bottom: solid 1px grey;
+    margin: 0;
+}
+  
+#navbar header{
+    font-size: 2rem;
+    border-bottom: solid 1px black;
+    padding: 20px 0;
+    background-color:#CDCDCE;
+}
+
+#navbar ul a{
+    text-decoration: none;
+    color: #4d4e53;
+    transition: .4s;
+
+}
+#navbar ul li:hover{
+    padding-left: 40px;
+    transition: .4s;
+    background-color: grey;
+}
+#navbar ul li:hover a{
+    transition: .4s;
+    color: white;
+}
+
+#check{
+    display: none;
+}
+
+label #btn{
+    position: fixed;
+    z-index: 2;
+    top: 0px;
+    right: 0px;
+    font-size: 30px;
+    color: black;
+    background-color: #CDCDCE;
+    padding: 6px 12px 6px 12px;
+    border-bottom-left-radius: 10px;
+    border: 3px solid grey;
+    transition: all 0.5s ease;
+}
+
+#check:checked ~ nav{
+    right: 0;
+}
+
+#check:checked ~ label #btn{
+    right: 350px;
+}
