@@ -126,11 +126,11 @@ label #btn{
 
 @media screen and ((max-width: 600px)){
     #navbar{
-        width: 60%;
-        right: -60%;
+        width: 70%;
+        right: -70%;
     }
     #check:checked ~ label #btn{
-        right: 60%;
+        right: 70%;
     }
 }
 
