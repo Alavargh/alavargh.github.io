@@ -138,4 +138,7 @@ label #btn{
     #navbar ul li{
         padding: 15px 0;
     }
+    #navbar ul{
+        font-size: 1.2rem;
+      }
 }
