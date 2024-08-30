@@ -141,4 +141,7 @@ label #btn{
     #navbar ul{
         font-size: 1.2rem;
       }
+    #navbar header{
+    font-size: 1.5rem;
+    }
 }
